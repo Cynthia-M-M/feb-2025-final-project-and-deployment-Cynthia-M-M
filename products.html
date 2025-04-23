@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartCart – Products</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">SmartCart</h1>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Our Products</h2>
+    <section class="product-grid">
+        <div class="product-card">
+          <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Smart Watch" />
+          <h3>Smart Watch</h3>
+          <p>$99.99</p>
+          <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://images.pexels.com/photos/3921831/pexels-photo-3921831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Wireless Earbuds" />
+          <h3>Wireless Earbuds</h3>
+          <p>$49.99</p>
+          <button onclick="addToCart('Wireless Earbuds')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://images.pexels.com/photos/691810/pexels-photo-691810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="ASUS Gaming Laptop" />
+          <h3>ASUS Gaming Laptop</h3>
+          <p>$1,299.99</p>
+          <button onclick="addToCart('ASUS Gaming Laptop')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Samsung Galaxy S21" />
+          <h3>Samsung Galaxy S21</h3>
+          <p>$799.99</p>
+          <button onclick="addToCart('Samsung Galaxy S21')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg" alt="Apple Watch Series 7" />
+          <h3>Apple Watch Series 7</h3>
+          <p>$399.99</p>
+          <button onclick="addToCart('Apple Watch Series 7')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://images.pexels.com/photos/4917455/pexels-photo-4917455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="JBL Flip 5" />
+          <h3>JBL Flip 5 Speaker</h3>
+          <p>$129.99</p>
+          <button onclick="addToCart('JBL Flip 5')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://dealerstore.co.ke/wp-content/uploads/2024/07/55ur78-.webp" alt="LG OLED TV" />
+          <h3>LG 55" OLED 4K TV</h3>
+          <p>$1,499.99</p>
+          <button onclick="addToCart('LG OLED TV')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/5B/D8/f78bf5e7-9374-4faa-94f4-2c070c37f4dc.png.webp" alt="Bluetooth Smart Glasses" />
+          <h3>Bluetooth Smart Glasses</h3>
+          <p>$129.99</p>
+          <button onclick="addToCart('Bluetooth Smart Glasses')">Add to Cart</button>
+        </div>
+      
+        <div class="product-card">
+          <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQbk57TGWVk7wmKH1OIlRHYjmXoBvLbXPq7_dOdwMynE0htrUmKI59bLtGTxqNYmsAQOsh3q080KQ1ERrErxa16p1i9g8Et9P89YNQ7ttcfHyJ_EeWKIwIqIpowouwNq9elzrKgxRkZmyw&usqp=CAc" alt="Samsung 32&quot; Smart LED TV" />
+          <h3>Samsung 32" Smart LED TV</h3>
+          <p>$299.99</p>
+          <button onclick="addToCart('Samsung 32 Smart LED TV')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i0.wp.com/orifon.co.ke/wp-content/uploads/2025/02/magpower-15-opb-7102w-1.png?fit=600%2C600&ssl=1" alt="Wireless Charging Pad" />
+            <h3>Wireless Charging Pad</h3>
+            <p>$29.99</p>
+            <button onclick="addToCart('Wireless Charging Pad')">Add to Cart</button>
+          </div>
+          
+          <div class="product-card">
+            <img src="data:image/webp;base64,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" alt="VR Headset" />
+            <h3>Virtual Reality Headset</h3>
+            <p>$349.99</p>
+            <button onclick="addToCart('Virtual Reality Headset')">Add to Cart</button>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://saruk.co.ke/_next/image?url=https%3A%2F%2Fsaruk-web-images.s3.eu-north-1.amazonaws.com%2FRedmi%252020000mAh%252018W%2520Fast%2520Charge%2520Power%2520Bank%2520.jpg&w=640&q=75" alt="Portable Power Bank" />
+            <h3>Portable Power Bank</h3>
+            <p>$39.99</p>
+            <button onclick="addToCart('Portable Power Bank')">Add to Cart</button>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/39/1324382/1.jpg?0052" alt="Gaming Mouse" />
+            <h3>RGB Gaming Mouse</h3>
+            <p>$59.99</p>
+            <button onclick="addToCart('RGB Gaming Mouse')">Add to Cart</button>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRFS6-eoWOECKZyXEyb0TQO9CwErjBKQBgd71GqdatiJtMQSMPhaxmKId8gytVb2BwNmrhUO9JlDiuDQ7U1cYlWZOJKfhixEZfbd6-m5dcuYqDAsjpGmCY-jQ&usqp=CAc" alt="Wireless Keyboard" />
+            <h3>Wireless Keyboard</h3>
+            <p>$45.99</p>
+            <button onclick="addToCart('Wireless Keyboard')">Add to Cart</button>
+          </div>
+          
+          <div class="product-card">
+            <img src="https://vistashop.co.ke/wp-content/uploads/2024/12/2.jpg" alt="Drone with Camera" />
+            <h3>Drone with HD Camera</h3>
+            <p>$499.99</p>
+            <button onclick="addToCart('Drone with HD Camera')">Add to Cart</button>
+          </div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SmartCart. All rights reserved.</p>
+  </footer>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

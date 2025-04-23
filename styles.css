@@ -1,0 +1,285 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #1f1d1d;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center/cover no-repeat;
+  color: #141414;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  text-align: left; /* Corrected text alignment */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center center; /* Keeps the image centered */
+  background-attachment: fixed; /* Optional: makes the background stay fixed on scroll */
+}
+
+/* Hero Section Heading */
+.hero h2 {
+  font-size: 2rem;
+  color: black;
+  text-align: top left;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+  background: #ff6a00;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff8533;
+  transform: scale(1.05);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background: #070707;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  background: #ff6a00;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.nav-links li a:hover,
+.btn:hover,
+.product-card button:hover {
+  background: #ff8533;
+  color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(255, 106, 0, 0.3);
+  border: 1px solid #ff6a00;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+  padding: 15px 20px;
+  font-size: 25px;
+  background-color: #9e4caf;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+
+.scroll-to-top:hover {
+  background-color: #45a049;
+}
+
+.scroll-to-top:focus {
+  outline: none;
+}
+
+/* Contact Form */
+.contact-form {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background: #111;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    background: #111;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem; /* Reduce padding for small screens */
+    background-position: top center; /* Adjust background positioning for better visibility on small screens */
+  }
+  
+  .hero h2 {
+    font-size: 1.2rem; /* Further reduce heading size on small screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 3rem;
+  }
+
+  .contact-form {
+    padding: 3rem;
+  }
+
+  .hero {
+    padding: 8rem 4rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  body {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 1rem 5rem;
+  }
+
+  .hero {
+    background-attachment: scroll; /* Prevents the background from being fixed on smaller screens */
+    padding: 5rem 2rem; /* Adjust padding for medium screens */
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem; /* Adjust heading size on medium screens */
+  }
+
+  .contact-form {
+    padding: 4rem;
+  }
+
+  .product-grid {
+    padding: 4rem;
+  }
+
+  footer {
+    padding: 2rem 3rem;
+  }
+
+  body {
+    padding: 0 4rem;
+  }
+}
